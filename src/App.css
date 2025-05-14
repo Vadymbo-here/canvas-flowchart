@@ -1,0 +1,233 @@
+#root {
+  min-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.app-header {
+  background-color: #fff;
+  color: #333;
+  padding: 10px 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  color: #00989B;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.toolbar {
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.toolbar-button {
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  background-color: #00989B;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.toolbar-button:hover {
+  background-color: #1d4ed8;
+}
+
+.toolbar-button:active {
+  transform: scale(0.98);
+}
+
+.btn-inverted {
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  color: #00989B;
+  border: 1px solid #00989B;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.canvas-container {
+  flex: 1;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.settings-panel {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.color-picker h4 {
+  margin-top: 0;
+  color: #333;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid transparent;
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+.color-option.active {
+  border: 2px solid #333;
+}
+
+.json-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.json-panel {
+  background-color: white;
+  border-radius: 5px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #333;
+  position: relative;
+}
+
+.json-panel-header {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.json-panel-header h3 {
+  margin: 8px auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  padding: 8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+.json-panel-content {
+  padding: 20px;
+}
+
+.file-upload {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-bottom: 20px;
+  gap: 8px
+}
+
+.json-textarea label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.json-textarea textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+.error-message {
+  color: #f44336;
+  margin: 10px 0;
+}
+
+.json-panel-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  background-color: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button.cancel {
+  background-color: #9e9e9e;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
